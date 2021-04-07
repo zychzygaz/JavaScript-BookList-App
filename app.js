@@ -47,7 +47,7 @@ class Book {
             2000
         );
     }
-
+    // Removes the book
     static removeBook(el) {
         if (el.classList.contains("del")) {
             el.parentElement.parentElement.remove();
