@@ -34,6 +34,20 @@ class Book {
         tbody.appendChild(ele);
     }
 
+    static bookAdded() {
+        const divAlert = document.createElement("div");
+        const form = document.querySelector("form");
+
+        divAlert.className = "alert-success alert";
+        divAlert.innerHTML = "The book was added";
+        document.querySelector("#divCon").insertBefore(divAlert, form);
+        // Make it disappear
+        setTimeout(
+            () => document.querySelector(".alert-success").remove(),
+            2000
+        );
+    }
+
     static removeBook(el) {
         if (el.classList.contains("del")) {
             el.parentElement.parentElement.remove();
@@ -56,6 +70,7 @@ form.addEventListener("submit", function (e) {
         document.getElementById("smallISBN").className = "errorShow";
     } else {
         Book.UI2(book);
+        Book.bookAdded();
         title.value = "";
         author.value = "";
         isbn.value = "";

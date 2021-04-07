@@ -49,45 +49,51 @@
             <h1 class="display-4" style="text-align: center">
                 My<span class="text-primary">Book</span>List
             </h1>
-            <form action="">
-                <div class="form-group">
-                    <label for="title">Title</label>
-                    <small id="smallTitle">Can not leave empty spaces</small>
+            <div class="container" id="divCon">
+                <form action="">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <small id="smallTitle"
+                            >Can not leave empty spaces</small
+                        >
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="title"
+                            required
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="author">Author</label>
+                        <small id="smallAuthor"
+                            >Can not leave empty spaces</small
+                        >
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="author"
+                            required
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="isbn">ISBN</label>
+                        <small id="smallISBN">Can not leave empty spaces</small>
+                        <input
+                            type="number"
+                            id="isbn"
+                            class="form-control"
+                            required
+                        />
+                    </div>
                     <input
-                        type="text"
-                        class="form-control"
-                        id="title"
-                        required
+                        id="btn"
+                        type="submit"
+                        value="Submit"
+                        class="btn btn-primary btn-block"
                     />
-                </div>
-                <div class="form-group">
-                    <label for="author">Author</label>
-                    <small id="smallAuthor">Can not leave empty spaces</small>
-                    <input
-                        type="text"
-                        class="form-control"
-                        id="author"
-                        required
-                    />
-                </div>
-                <div class="form-group">
-                    <label for="isbn">ISBN</label>
-                    <small id="smallISBN">Can not leave empty spaces</small>
-                    <input
-                        type="number"
-                        id="isbn"
-                        class="form-control"
-                        required
-                    />
-                </div>
-                <input
-                    id="btn"
-                    type="submit"
-                    value="Submit"
-                    class="btn btn-primary btn-block"
-                />
-            </form>
-            <table class="table">
+                </form>
+            </div>
+            <table class="table" style="margin-top: 20px">
                 <thead>
                     <tr>
                         <th>Title</th>
