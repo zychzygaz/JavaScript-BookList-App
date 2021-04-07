@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <title>Document</title>
+        <link rel="stylesheet" href="bootstrap.min.css" />
+        <style>
+            table thead tr th {
+                font-size: 20px;
+            }
+            label {
+                font-size: 20px;
+            }
+            #btn {
+                margin-top: 25px;
+            }
+
+            small.errorShow {
+                color: red;
+                font-size: 14px;
+                visibility: visible;
+                margin-left: 20px;
+            }
+
+            small {
+                visibility: hidden;
+            }
+
+            #delA {
+                color: white;
+                background-color: grey;
+                padding: 10px;
+                transition: background-color 0.8s ease;
+            }
+
+            #delA:hover {
+                text-decoration: none;
+                background: rgba(66, 66, 66, 0.137);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container mt-5">
+            <h1 class="display-4" style="text-align: center">
+                My<span class="text-primary">Book</span>List
+            </h1>
+            <form action="">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <small id="smallTitle">Can not leave empty spaces</small>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="title"
+                        required
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="author">Author</label>
+                    <small id="smallAuthor">Can not leave empty spaces</small>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="author"
+                        required
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="isbn">ISBN</label>
+                    <small id="smallISBN">Can not leave empty spaces</small>
+                    <input
+                        type="text"
+                        id="isbn"
+                        class="form-control"
+                        required
+                    />
+                </div>
+                <input
+                    id="btn"
+                    type="submit"
+                    value="Submit"
+                    class="btn btn-primary btn-block"
+                />
+            </form>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>ISBN</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
